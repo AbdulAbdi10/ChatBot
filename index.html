@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FreshMart Grocery Assistant</title>
+  <meta name="description" content="FreshMart Grocery Assistant helps customers with store hours, delivery, payment options, products, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="hero">
+      <div class="hero__content">
+        <div class="brand-badge">FreshMart Neighborhood Grocery</div>
+        <h1>Friendly grocery help for your website</h1>
+        <p class="hero__text">
+          A bilingual grocery chatbot demo for GitHub Pages. Customers can ask about hours, delivery,
+          halal items, payment methods, produce, and store location.
+        </p>
+
+        <div class="hero__actions">
+          <button class="hero-chip" data-quick="What are your store hours?">Store Hours</button>
+          <button class="hero-chip" data-quick="Do you offer delivery?">Delivery</button>
+          <button class="hero-chip" data-quick="Do you sell halal meat?">Halal</button>
+          <button class="hero-chip" data-quick="Do you accept EBT?">EBT</button>
+        </div>
+      </div>
+
+      <div class="hero__card">
+        <div class="mini-card">
+          <span class="mini-card__label">Live Demo Questions</span>
+          <ul>
+            <li>What time do you open?</li>
+            <li>Do you have fresh produce today?</li>
+            <li>Where are you located?</li>
+            <li>Can I talk to someone?</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="app-grid">
+      <section class="chat-panel">
+        <div class="chat-panel__header">
+          <div>
+            <h2>Website Chat Assistant</h2>
+            <p>Ready for GitHub Pages</p>
+          </div>
+
+          <div class="toolbar">
+            <label for="languageSelect" class="sr-only">Language</label>
+            <select id="languageSelect" aria-label="Select language">
+              <option value="en">English</option>
+              <option value="so">Somali</option>
+            </select>
+            <button id="clearChatBtn" class="secondary-btn" type="button">Clear</button>
+          </div>
+        </div>
+
+        <div id="chatbox" class="chatbox" aria-live="polite" aria-label="Chat conversation"></div>
+
+        <div class="quick-questions">
+          <button class="quick-btn" data-quick="What are your store hours?">Hours</button>
+          <button class="quick-btn" data-quick="Do you offer delivery?">Delivery</button>
+          <button class="quick-btn" data-quick="Do you sell halal meat?">Halal</button>
+          <button class="quick-btn" data-quick="Do you accept EBT?">EBT</button>
+          <button class="quick-btn" data-quick="Where are you located?">Location</button>
+          <button class="quick-btn" data-quick="Do you have organic produce?">Produce</button>
+        </div>
+
+        <form id="chatForm" class="chat-form">
+          <label for="userInput" class="sr-only">Ask a question</label>
+          <input
+            id="userInput"
+            type="text"
+            placeholder="Type your question here..."
+            autocomplete="off"
+          />
+          <button type="submit" class="primary-btn">Send</button>
+        </form>
+      </section>
+
+      <aside class="info-panel">
+        <div class="info-card">
+          <h3>What this demo answers</h3>
+          <ul class="feature-list">
+            <li>Store hours</li>
+            <li>Delivery options</li>
+            <li>Halal and organic items</li>
+            <li>EBT / SNAP payments</li>
+            <li>Store location and phone</li>
+            <li>Talk-to-staff handoff</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h3>Suggested website use</h3>
+          <p>
+            Put this chatbot on your grocery store home page, order page, or contact page so customers
+            can get quick answers before they call.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Store details in this sample</h3>
+          <p><strong>FreshMart Grocery</strong><br />123 Main Street<br />Minneapolis, MN</p>
+          <p><strong>Phone:</strong> (612) 555-1234<br /><strong>Hours:</strong> Daily 8:00 AM - 9:00 PM</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <p>Demo project for a small local grocery store • GitHub Pages • HTML • CSS • JavaScript</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
